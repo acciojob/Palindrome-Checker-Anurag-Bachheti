@@ -1,16 +1,12 @@
-// complete the given function
+function palindrome(str) {
+  // Remove non-alphanumeric characters and lowercase
+  let cleanStr = str.replace(/[^a-z0-9]/gi, "").toLowerCase();
 
-function palindrome(str){
+  // Reverse it
+  let newStr = cleanStr.split("").reverse().join("");
 
-	let cleanStr = str.replace(/[^a-z0-9]/gi, "").toLowerCase();
-	
-	let newStr = cleanStr.split("").reverse().join("");
-	
-	if(cleanStr === newStr){
-		console.log("true")
-	}else{
-		console.log("false")
-	}
+  // Return boolean instead of console.log
+  return cleanStr === newStr;
 }
 
-module.exports = palindrome
+module.exports = palindrome;
