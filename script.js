@@ -1,12 +1,15 @@
 // complete the given function
 
 function palindrome(str){
-	let newStr = str.split("").reverse().join("");
+
+	let cleanStr = str.replace(/[^a-z0-9]/gi, "").toLowerCase();
 	
-	if(str === newStr){
+	let newStr = cleanStr.split("").reverse().join("");
+	
+	if(cleanStr === newStr){
 		console.log("true")
 	}else{
-		console.log(false)
+		console.log("false")
 	}
 }
 
